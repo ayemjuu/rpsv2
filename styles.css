@@ -1,0 +1,184 @@
+
+body {
+    background-color: rgb(169, 169, 206);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.container {
+    background-color: rgb(104, 126, 126);
+    height: 700px;
+    width: 1200px;
+
+    /* display: flex;
+    padding: 20px; */
+
+
+}
+
+
+.leftSide {
+    background-color: rgb(216, 193, 164);
+    height: 560px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+}
+
+.player {
+    position: absolute;
+    top: 0px;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.buttonsContainer {
+    display: flex;
+    justify-content:center;
+    align-items: self-end;
+    gap: 20px;
+}
+.buttons {
+    height: 50px;
+    width: 100px;
+}
+
+.rightSide {
+    background-color: rgb(178, 212, 181);
+    height: 560px;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+
+}
+
+.computer {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+
+.header{
+    background-color: rgb(223, 207, 91);
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.title {
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: lavender;
+    height: 600px;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+#rock {
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   
+    transform: translate(-50%, -50%);
+    /* rotate: 90deg; */
+}
+
+
+#paper {
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   
+    transform: translate(-50%, -50%);
+    /* rotate: 90deg; */
+}
+#scissors {
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   
+    transform: translate(-50%, -50%);
+    /* rotate: 90deg; */
+}
+
+
+#computerRock {
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   
+    transform: translate(-50%, -50%);
+    /* rotate: 90deg; */
+}
+
+#computerPaper {
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   
+    transform: translate(-50%, -50%);
+    /* rotate: 90deg; */
+}
+
+#computerScissors {
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   
+    transform: translate(-50%, -50%);
+    /* rotate: 90deg; */
+}
+
+.modal {
+    display: none; /* Hide the modal by default */
+    position: fixed; /* Fixed position */
+    z-index: 1; /* Make sure it appears on top of other elements */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scrolling if needed */
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+}
+
+/* Style for the modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Center modal on screen */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /* Set width */
+    height: 30%;
+}
+
+.textModal {
+    font-size: 80px;
+    text-align: center;
+}

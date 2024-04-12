@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rpsv2</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <div id="winModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <p class="textModal">You Win!</p>
+        </div>
+      </div>
+
+      <div id="loseModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <p class="textModal">You Lose!</p>
+        </div>
+      </div>
+      
+      <div id="tieModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <p class="textModal">A tie!</p>
+        </div>
+      </div>
+    
+
+  
+    <div class="container">
+
+        <div class="header">
+
+            <p class="title">JAN, KEN, PON!</p>
+            
+        </div>
+
+        <div class="footer">
+
+            <div class="leftSide">
+            <p class="player">Player</p>
+
+            <img src="" alt="" id="rock" >
+            <img src="" alt="" id="paper" >
+            <img src="" alt="" id="scissors" >
+
+
+            <div>
+
+            </div>
+
+                <div class="buttonsContainer">
+
+                    <button class="buttons" onclick="
+                    displayRock();
+                    // const Computer = Math.random();
+                    const Computer = Math.floor(Math.random() * 3) + 1;
+                    // console.log(Computer);
+
+                    let computerMove = '';
+
+                    if ( Computer == 1) {
+                        // console.log('rock');
+                        computerMove = 'rock';
+                        computerDisplayRock();
+
+                    } else if (Computer == 2) {
+                        // console.log('scissors');
+                        computerMove = 'scissors';
+                        computerDisplayScissors();
+
+                    } else if (Computer == 3) {
+                        // console.log('paper');
+                        computerMove = 'paper';
+                        computerDisplayPaper();
+                    }
+                    console.log(computerMove);
+
+                    let result ='';
+                    if (computerMove == 'rock') {
+                        result= 'Tie';
+                        setTimeout(openModalTie, 1000);
+
+                    } else if (computerMove =='paper') {
+                        result = 'Lose';
+                        setTimeout(openModalLose, 1000);
+
+
+                    } else if (computerMove == 'scissors') {
+                        result ='You win';
+                        setTimeout(openModalWin, 1000);
+                    }
+                    // alert(`You picked Rock, Computer picked ${computerMove}. ${result}`);
+
+                " >Rock</button>
+                <button class="buttons" onclick="
+                    displayPaper();
+                    // const Computer = Math.random();
+                    const Computer1 = Math.floor(Math.random() * 3) + 1;
+                    // console.log(Computer);
+
+                    let computerMove1 = '';
+
+                    if ( Computer1 == 1) {
+                        // console.log('rock');
+                        computerMove1 = 'rock';
+                        computerDisplayRock();
+                    } else if (Computer1 == 2) {
+                        // console.log('scissors');
+                        computerMove1 = 'scissors';
+                        computerDisplayScissors();
+                    } else if (Computer1 == 3) {
+                        // console.log('paper');
+                        computerMove1 = 'paper';
+                        computerDisplayPaper();
+                    }
+                    console.log(computerMove1);
+
+                    let result1 ='';
+                    if (computerMove1 == 'rock') {
+                        result1 = 'You Win';
+                        setTimeout(openModalWin, 1000);
+
+                    } else if (computerMove1 =='paper') {
+                        result1 = 'Tie';
+                        setTimeout(openModalTie, 1000);
+
+                    } else if (computerMove1 == 'scissors') {
+                        result1 ='You Lose';
+                        setTimeout(openModalLose, 1000);
+
+
+                    }
+                    // alert(`You picked Paper, Computer picked ${computerMove1}. ${result1}`);
+                
+                "
+                >Paper</button>
+
+
+                <button class="buttons" onclick="
+                    displayScissors();
+                
+                    // const Computer = Math.random();
+                    const Computer2 = Math.floor(Math.random() * 3) + 1;
+                    // console.log(Computer);
+
+                    let computerMove2 = '';
+
+                    if ( Computer2 == 1) {
+                        // console.log('rock');
+                        computerMove2 = 'rock';
+                        computerDisplayRock();
+                    } else if (Computer2 == 2) {
+                        // console.log('scissors');
+                        computerMove2 = 'scissors';
+                        computerDisplayScissors();
+                    } else if (Computer2 == 3) {
+                        // console.log('paper');
+                        computerMove2 = 'paper';
+                        computerDisplayPaper();
+                    }
+                    console.log(computerMove2);
+                    
+                    let result2 ='';
+                    if (computerMove2 == 'rock') {
+                        result2 = 'You Lose';
+                        setTimeout(openModalLose, 1000);
+                    } else if (computerMove2 =='paper') {
+                        result2 = 'You Win';
+                        setTimeout(openModalWin, 1000);
+                    } else if (computerMove2 == 'scissors') {
+                        result2 ='Tie';
+                        setTimeout(openModalTie, 1000);
+                    }
+                    // alert(`You picked Scissors, Computer picked ${computerMove2}. ${result2}`);
+
+                    ">Scissors</button>
+
+                </div>
+            </div>
+
+            <div class="rightSide">
+
+                 <p class="computer">Computer</p>
+
+                 <img src="" alt="" id="computerRock" >
+                 <img src="" alt="" id="computerPaper" >
+                 <img src="" alt="" id="computerScissors" >
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
